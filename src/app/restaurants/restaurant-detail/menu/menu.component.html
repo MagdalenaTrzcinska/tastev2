@@ -1,0 +1,13 @@
+<div class="card">
+  <img src="{{dish.imagePath}}" class="card-img-top" alt="{{dish.name}}">
+  <div class="card-body">
+    <h5 class="card-title">{{dish.name}}</h5>
+    <p class="card-text" style="height: 50px">{{dish.description}}</p>
+
+    <div class="row">
+      <div class="col-4 align-self-end">{{dish.price}} &euro;</div>
+      <input type="number" value="1" min="1" class="mr-2 ml-auto form-control" #amount>
+      <button class="btn">Add</button>
+    </div>
+  </div>
+</div>

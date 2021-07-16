@@ -1,0 +1,26 @@
+@import "src/app/styles/variables";
+
+header {
+  position: relative;
+  background: linear-gradient(rgba(11, 34, 44, 0.5), rgba(11, 34, 44, 0.5)), url("../../assets/main-background.jpg") center left 10%;
+  background-size: cover;
+  height: 100vh;
+
+  .logo {
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+
+  .box {
+    position: relative;
+    top: calc(50% - 50px);
+    transform: translateY(-50%);
+
+    h3 {
+      font-size: 50px;
+      font-family: $font-title;
+      color: $secondary-color;
+    }
+  }
+}
