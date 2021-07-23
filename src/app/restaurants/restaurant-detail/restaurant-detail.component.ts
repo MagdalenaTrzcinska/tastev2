@@ -34,6 +34,11 @@ export class RestaurantDetailComponent implements OnInit {
         });
     });
   }
+
+  getMinimumCost(): number {
+    const prizes = this.menu.map(d => d.price);
+    return Math.min(...prizes);
+  }
 }
 
 

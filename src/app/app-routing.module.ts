@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {RouteReuseStrategy, RouterModule, Routes} from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 import {SearchPageComponent} from './search-page/search-page.component';
 import {RestaurantsComponent} from './restaurants/restaurants.component';
 import {RestaurantDetailComponent} from './restaurants/restaurant-detail/restaurant-detail.component';

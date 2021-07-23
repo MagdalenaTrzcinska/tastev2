@@ -9,8 +9,7 @@ import {BehaviorSubject, Observable, Subject} from 'rxjs';
   providedIn: 'root'
 })
 export class RestaurantService {
-  isLoading = new Subject<boolean>();
-  vis: boolean;
+  visibleNavOfRestaurants: boolean;
 
   constructor(private http: HttpClient) {
   }
@@ -62,14 +61,6 @@ export class RestaurantService {
           return opinions;
         })
       );
-  }
-
-
-  show(): void {
-    this.isLoading.next(true);
-  }
-  hide(): void {
-    this.isLoading.next(false);
   }
 
 }

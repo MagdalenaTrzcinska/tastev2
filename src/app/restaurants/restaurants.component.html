@@ -3,7 +3,7 @@
     <h2 class="logo">TASTE</h2>
   </div>
 
-  <div class="col-8 col-lg-5 align-self-end" *ngIf="service.vis">
+  <div class="col-8 col-lg-5 align-self-end" *ngIf="service.visibleNavOfRestaurants">
     <ul class="nav">
       <li class="nav-item" *ngFor="let name of nameOfRestaurants">
         <a class="nav-link" routerLinkActive="active" routerLink="{{name.name}}">{{name.name}}</a>
@@ -12,5 +12,4 @@
   </div>
 </section>
 
-<!-- <app-spinner></app-spinner> -->
 <router-outlet></router-outlet>

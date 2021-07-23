@@ -22,9 +22,7 @@ export class NoSelectedComponent implements OnInit {
     });
   }
 
-  go(): void {
-    this.service.vis = true;
+  onOpenRestaurantInfo(): void {
+    this.service.visibleNavOfRestaurants = true;
   }
-
-
 }

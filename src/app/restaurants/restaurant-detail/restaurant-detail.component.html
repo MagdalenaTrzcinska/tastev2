@@ -14,7 +14,7 @@
       <i class="fas fa-truck"></i> {{ detail.amount }}
     </span>
       <span class="offer">
-      <i class="fas fa-dollar-sign"></i>MIN. {{ getMinimumCost()
+      <i class="fas fa-dollar-sign"></i>MIN. {{ getMinimumCost() }}
     </span>
     </div>
   </div>
@@ -22,8 +22,8 @@
   <div class="row">
     <div class="col-12 col-lg-8">
       <div class="row justify-content-center justify-content-lg-start">
-        <div class="col-9 col-sm-5 col-md-5 col-lg-4 col-xl-3 p-2" *ngFor="let m of menu">
-          <app-menu [dish]="m"></app-menu>
+        <div class="col-9 col-sm-5 col-md-5 col-lg-4 col-xl-3 p-2" *ngFor="let dish of menu">
+          <app-menu [dish]="dish"></app-menu>
         </div>
       </div>
     </div>
