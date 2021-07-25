@@ -36,7 +36,7 @@ export class RestaurantDetailComponent implements OnInit {
   }
 
   getMinimumCost(): number {
-    const prizes = this.menu.map(d => d.price);
+    const prizes = this.menu.map(dish => dish.price);
     return Math.min(...prizes);
   }
 }
