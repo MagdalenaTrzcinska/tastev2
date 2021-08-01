@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-import {RestaurantService} from '../restaurant.service';
+import {RestaurantService} from '../../services/restaurant.service';
 
 @Component({
   selector: 'app-search-page',
@@ -9,13 +9,9 @@ import {RestaurantService} from '../restaurant.service';
 })
 export class SearchPageComponent implements OnInit {
 
-  constructor(private router: Router) {
+  constructor() {
   }
 
   ngOnInit(): void {
-  }
-
-  onSearch(city: string): void {
-    this.router.navigate(['restaurants', city]);
   }
 }

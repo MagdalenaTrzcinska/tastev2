@@ -1,11 +1,11 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {SearchPageComponent} from './search-page/search-page.component';
-import {RestaurantsComponent} from './restaurants/restaurants.component';
-import {RestaurantDetailComponent} from './restaurants/restaurant-detail/restaurant-detail.component';
-import {NoSelectedComponent} from './restaurants/no-selected/no-selected.component';
+import {SearchPageComponent} from './components/search-page/search-page.component';
+import {RestaurantsComponent} from './components/restaurants/restaurants.component';
+import {RestaurantDetailComponent} from './components/restaurants/restaurant-detail/restaurant-detail.component';
+import {NoSelectedComponent} from './components/restaurants/no-selected/no-selected.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   {path: '', component: SearchPageComponent, pathMatch: 'full'},
   {path: 'restaurants/:city', component: RestaurantsComponent, children: [
       {path: '', component: NoSelectedComponent},

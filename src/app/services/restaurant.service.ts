@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {environment} from '../environments/environment';
-import {Delivery, Menu, Opinion, Restaurant} from './restaurant.model';
+import {environment} from '../../environments/environment';
+import {Delivery, Menu, Opinion, Restaurant} from '../restaurant.model';
 import {catchError, filter, map} from 'rxjs/operators';
 import {BehaviorSubject, Observable, Subject} from 'rxjs';
 
@@ -14,14 +14,14 @@ export class RestaurantService {
   constructor(private http: HttpClient) {
   }
 
-  gettingANameOfRestaurants(city: string): any {
+  gettingANameOfRestaurants(city: string): any{
     return this.http.get<Restaurant>(`${environment.API}.json`)
       .pipe(
         map(responseData => {
           const names = [];
           for (const key in responseData) {
             if (responseData.hasOwnProperty(key) && responseData[key].location === city) {
-              names.push({name: key});
+              names.push(key);
             }
           }
           return names;

@@ -1,0 +1,61 @@
+@import "src/app/styles/variables";
+
+section {
+  nav {
+    background-color: $primary-color;
+
+    a {
+      color: white;
+      text-decoration: none;
+
+      h2 {
+        margin: 0;
+      }
+    }
+
+    .navbar-collapse {
+      .nav-item {
+        position: relative;
+
+        .nav-link:hover,
+        .nav-link.active {
+          color: $secondary-color;
+
+          @include for-desktop {
+            color: white;
+          }
+        }
+      }
+
+      .badge {
+        background-color: $secondary-color;
+        color: white;
+        border-radius: 50%;
+        font-size: 8px;
+        position: relative;
+        bottom: 13px;
+        right: 10px;
+      }
+    }
+  }
+}
+
+@include for-desktop {
+  .nav-link.active:before,
+  .nav-link:hover:before {
+    width: 80%;
+    height: 2px;
+  }
+
+  .nav-link::before {
+    position: absolute;
+    content: "";
+    background-color: $secondary-color;
+    left: 10%;
+    bottom: 10px;
+    width: 0;
+    height: 2px;
+
+    transition: width 1s;
+  }
+}

@@ -1,5 +1,5 @@
 import {ChangeDetectorRef, Component, Input, OnInit} from '@angular/core';
-import {RestaurantService} from '../../restaurant.service';
+import {RestaurantService} from '../../../services/restaurant.service';
 import {ActivatedRoute, Params, Router} from '@angular/router';
 
 @Component({

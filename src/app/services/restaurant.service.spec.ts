@@ -1,7 +1,7 @@
 import {TestBed} from '@angular/core/testing';
 import {RestaurantService} from './restaurant.service';
 import {HttpClientModule} from '@angular/common/http';
-import {Delivery} from './restaurant.model';
+import {Delivery} from '../restaurant.model';
 
 describe('RestaurantsService', () => {
   let service: RestaurantService;
@@ -18,7 +18,7 @@ describe('RestaurantsService', () => {
   });
 
   it('should return expected restaurants', (done: DoneFn) => {
-    const names = [{name: 'ee'}, {name: 'food-fed'}, {name: 'pizzaorzo'}];
+    const names = ['ee', 'food-fed', 'pizzaorzo'];
 
     service.gettingANameOfRestaurants('Warsaw').subscribe(v => {
       expect(v).toEqual(names);

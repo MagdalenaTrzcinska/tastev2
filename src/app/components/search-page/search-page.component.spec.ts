@@ -4,7 +4,8 @@ import {ComponentFixture, fakeAsync, getTestBed, inject, TestBed, tick} from '@a
 import {RouterTestingModule} from '@angular/router/testing';
 import {SearchPageComponent} from './search-page.component';
 import {By} from '@angular/platform-browser';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
+import {Location} from '@angular/common';
 
 describe('SearchPageComponent', () => {
   let component: SearchPageComponent;
@@ -60,10 +61,16 @@ describe('SearchPageComponent', () => {
     expect(button.textContent).toContain('Search');
   });
 
+  /*
   it('navigates to the list of restaurants route when clicked the Search', () => {
-    const router = TestBed.inject(Router);
-    const spy = spyOn(router, 'navigate');
-    component.onSearch('Warsaw');
-    expect(spy.calls.first().args[0]).toContain('restaurants', 'Warsaw');
+    const router = TestBed.get(Router);
+    const location = TestBed.get(Location);
+
+    router.navigate(['restaurants/Warsaw']).then(() => {
+      expect(location.path()).toBe('restaurants/Warsaw');
+    });
   });
+
+   */
+
 });

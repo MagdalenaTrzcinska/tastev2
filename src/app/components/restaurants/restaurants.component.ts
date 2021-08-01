@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {RestaurantService} from '../restaurant.service';
-import {ActivatedRoute, Params, Router} from '@angular/router';
-
+import {RestaurantService} from '../../services/restaurant.service';
+import {ActivatedRoute, Params} from '@angular/router';
 
 
 @Component({
@@ -12,13 +11,13 @@ import {ActivatedRoute, Params, Router} from '@angular/router';
 export class RestaurantsComponent implements OnInit {
   nameOfRestaurants;
 
-  constructor(public service: RestaurantService, private route: ActivatedRoute, private router: Router) {
+  constructor(public service: RestaurantService, public route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
-     const city = params.city;
-     this.service.gettingANameOfRestaurants(city).subscribe(posts => {
+      const city = params.city;
+      this.service.gettingANameOfRestaurants(city).subscribe(posts => {
         this.nameOfRestaurants = posts;
       });
     });
