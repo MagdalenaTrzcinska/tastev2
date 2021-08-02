@@ -1,4 +1,4 @@
-import {async, ComponentFixture, fakeAsync, getTestBed, inject, TestBed, tick} from '@angular/core/testing';
+import {async, ComponentFixture, inject, TestBed} from '@angular/core/testing';
 
 import {Location} from '@angular/common';
 
@@ -7,7 +7,7 @@ import {RouterTestingModule} from '@angular/router/testing';
 import {RestaurantsComponent} from './restaurants.component';
 import {HttpClientModule} from '@angular/common/http';
 import {By} from '@angular/platform-browser';
-import {ActivatedRoute, Params, Router} from '@angular/router';
+import {Router} from '@angular/router';
 import {RestaurantDetailComponent} from './restaurant-detail/restaurant-detail.component';
 import {routes} from '../../app-routing.module';
 

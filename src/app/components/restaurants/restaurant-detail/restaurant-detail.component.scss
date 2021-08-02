@@ -1,5 +1,22 @@
 @import "src/app/styles/variables";
 
+h1 {
+  position: absolute;
+  font-size: 34px;
+  top: 50px;
+  left: 120px;
+  color: $primary-dark-color;
+}
+
+.offer {
+  padding: 10px;
+
+  i {
+    padding-right: 10px;
+    color: $secondary-color;
+  }
+}
+
 hr {
   color: $primary-dark-color;
 }
